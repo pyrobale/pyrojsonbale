@@ -1,0 +1,15 @@
+{
+    "TOKEN": "TESTTOKEN",
+    "handlers": [
+        {
+            "type": "message",
+            "filters": ["text:/start"],
+            "actions": [
+                {
+                    "type":"reply",
+                    "text": "$JDATE"
+                }
+            ]
+        }
+    ]
+}
