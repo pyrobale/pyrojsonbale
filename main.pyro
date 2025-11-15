@@ -1,5 +1,5 @@
 {
-    "TOKEN": "TESTTOKEN",
+    "TOKEN": "TOKEN",
     "handlers": [
         {
             "type": "message",
@@ -7,7 +7,26 @@
             "actions": [
                 {
                     "type":"reply",
-                    "text": "$JDATE"
+                    "text": "$MENTION"
+                }
+            ],
+            "inline_keyboard": [
+                [
+                    {
+                        "text":"کلیک کنید",
+                        "callback_data": "hi"
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "callback",
+            "filters": ["data:hi"],
+            "actions": [
+                {
+                    "type": "answer",
+                    "text": "باشه",
+                    "alert": true
                 }
             ]
         }
